@@ -12,7 +12,7 @@ export const profile = {
   role: "Data Scientist & AI Engineer",
   // Rotating taglines shown under your name in the sidebar
   taglines: ["Data Scientist", "AI Engineer", "ML Engineer"],
-  avatar: asset("/Hexagon.png"),
+  avatar: asset("public/ak.jpg"),
   location: "Houston, TX",
   email: "akura403@gmail.com",
   // Put a PDF in /public (e.g. /public/resume.pdf) and set this to "/resume.pdf"
