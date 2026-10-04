@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
-// Static export so the site can be hosted for free on GitHub Pages.
+// Static export for GitHub Pages. The base path (e.g. /Portfolio-AMK) is set by the deploy workflow.
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
+  basePath,
   images: { unoptimized: true },
 };
 

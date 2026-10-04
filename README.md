@@ -1,6 +1,6 @@
-# Ananya Kura — Portfolio
+# Portfolio-AMK
 
-Live at **https://ananyamk1.github.io**. Built with Next.js + Tailwind, exported as a static site and hosted free on GitHub Pages.
+Live at **https://ananyamk1.github.io/Portfolio-AMK**. Built with Next.js + Tailwind, exported as a static site and hosted free on GitHub Pages.
 
 ## Editing content
 

@@ -5,7 +5,7 @@ import type { Project } from "@/data/portfolio";
 
 export function ProjectImage({ project, className }: { project: Project; className: string }) {
   if (project.image) {
-    return <Image src={project.image} alt={project.title} fill className={className} sizes="(min-width: 1024px) 50vw, 100vw" />;
+    return <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${project.image}`} alt={project.title} fill className={className} sizes="(min-width: 1024px) 50vw, 100vw" />;
   }
   // Placeholder until a screenshot is added in data/portfolio.ts
   return (
