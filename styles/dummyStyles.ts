@@ -9,7 +9,7 @@ export const homePageStyles = {
   // Background grid pattern
   backgroundGrid: {
     wrapper: "pointer-events-none -z-20 absolute inset-0 [background-size:40px_40px] select-none",
-    pattern: "[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
+    pattern: "[background-image:linear-gradient(to_right,#1c2a1c_1px,transparent_1px),linear-gradient(to_bottom,#1c2a1c_1px,transparent_1px)]"
   },
 
   // Gradient overlay
@@ -460,7 +460,7 @@ export const sidebarStyles = {
   mobileTopNavInner: "flex items-center justify-between",
   mobileAvatarContainer: "flex items-center gap-3",
   mobileAvatar: "w-10 h-10 rounded-full overflow-hidden ring-1 ring-white/10 shadow-sm",
-  mobileAvatarImage: "object-cover",
+  mobileAvatarImage: "h-full w-full object-cover object-top",
   mobileName: "font-semibold text-zinc-100 text-base",
   mobileTyping: "text-xs text-zinc-400 truncate max-w-[120px]",
 
@@ -471,7 +471,7 @@ export const sidebarStyles = {
   desktopSidebar: "hidden md:flex flex-col w-[260px] h-screen px-6 py-8 bg-zinc-950 border-r border-zinc-800 fixed left-0 top-0 overflow-y-auto",
   desktopAvatarContainer: "flex items-center gap-3 mb-6",
   desktopAvatar: "w-12 h-12 rounded-full overflow-hidden ring-1 ring-white/10 shadow-sm",
-  desktopAvatarImage: "object-cover",
+  desktopAvatarImage: "h-full w-full object-cover object-top",
   desktopName: "font-semibold text-zinc-100",
   desktopTyping: "text-xs text-zinc-400",
 

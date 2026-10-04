@@ -12,7 +12,7 @@ export const profile = {
   role: "Data Scientist & AI Engineer",
   // Rotating taglines shown under your name in the sidebar
   taglines: ["Data Scientist", "AI Engineer", "ML Engineer"],
-  avatar: asset("public/ak.jpg"),
+  avatar: asset("/ak.jpg"),
   location: "Houston, TX",
   email: "akura403@gmail.com",
   // Put a PDF in /public (e.g. /public/resume.pdf) and set this to "/resume.pdf"
@@ -99,6 +99,41 @@ export const education = [
 export const achievements = [
   { title: "MIT GrandHack '25", value: "Google Challenge", sub: "Award winner" },
   { title: "Certifications", value: "3", sub: "AWS Cloud Practitioner · DataCamp AI Engineer · CodePath AI Eng (Honors)" },
+];
+
+// ---------------------------------------------------------------------------
+// COMMUNITY & EVENTS — hackathons, meetups, conferences (shown at the bottom of Experience)
+// `type`: "Hackathon" | "Meetup" | "Conference". `role`: e.g. "Participant", "Attendee".
+// `image` is optional: put a photo in /public/events/ and set e.g. asset("/events/grandhack25.jpg")
+// ---------------------------------------------------------------------------
+export type CommunityEvent = {
+  name: string;
+  type: "Hackathon" | "Meetup" | "Conference";
+  role: string;
+  date: string;
+  location: string;
+  note?: string;
+  image?: string;
+};
+
+export const events: CommunityEvent[] = [
+  {
+    name: "MIT GrandHack '26",
+    type: "Hackathon",
+    role: "Participant",
+    date: "2026",
+    location: "Boston, MA",
+  },
+  {
+    name: "MIT GrandHack '25",
+    type: "Hackathon",
+    role: "Participant · Google Challenge award",
+    date: "2025",
+    location: "Boston, MA",
+    note: "Built KonPop Detection, a multimodal oral-cancer screening model on Vertex AI.",
+  },
+  // Add more — copy this template:
+  // { name: "Event name", type: "Meetup", role: "Attendee", date: "2026", location: "Houston, TX", image: asset("/events/photo.jpg") },
 ];
 
 // ---------------------------------------------------------------------------

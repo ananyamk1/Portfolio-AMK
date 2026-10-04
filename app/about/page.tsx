@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { aboutPageStyles as s } from "@/styles/dummyStyles";
 import { profile, education } from "@/data/portfolio";
 import { MailIcon } from "../components/Icons";
@@ -12,7 +13,17 @@ export default function AboutPage() {
       <div className={s.contentContainer}>
         <div className={s.backgroundContainer}>
           <div className={s.contentWrapper}>
-            <h1 className={s.mainHeading}>About me</h1>
+            <div className="flex flex-col-reverse gap-6 sm:flex-row sm:items-end sm:justify-between">
+              <h1 className={s.mainHeading}>About me</h1>
+              <Image
+                src={profile.avatar}
+                alt={profile.name}
+                width={160}
+                height={200}
+                className="h-48 w-36 rounded-2xl object-cover object-top ring-1 ring-zinc-700 sm:h-56 sm:w-44"
+                priority
+              />
+            </div>
 
             <div className={s.interestsContainer}>
               {profile.interests.map((item, i) => (

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { timelineStyles as s } from "@/styles/dummyStyles";
-import { experience, education, achievements, profile } from "@/data/portfolio";
+import Image from "next/image";
+import { experience, education, achievements, profile, events } from "@/data/portfolio";
 import { BriefcaseIcon, GradIcon, LayersIcon } from "../components/Icons";
 
 export const metadata: Metadata = { title: "Experience" };
@@ -108,6 +109,32 @@ export default function ExperiencePage() {
             ))}
           </div>
         </div>
+
+        {events.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-white">Community &amp; Events</h2>
+            <p className="mt-2 text-sm text-zinc-400">Hackathons, AI meetups, and tech conferences I&apos;ve taken part in.</p>
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {events.map((e) => (
+                <div key={e.name} className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/40">
+                  <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-blue-900/60 via-zinc-900 to-purple-900/50">
+                    {e.image ? (
+                      <Image src={e.image} alt={e.name} fill className="object-cover" sizes="(min-width: 1024px) 33vw, 100vw" />
+                    ) : (
+                      <div className="flex h-full items-center justify-center px-4 text-center text-lg font-semibold text-zinc-200/90">{e.name}</div>
+                    )}
+                    <span className="absolute left-3 top-3 rounded-full bg-zinc-950/80 px-3 py-1 text-xs font-medium text-blue-300">{e.type}</span>
+                  </div>
+                  <div className="p-4">
+                    <h3 className={s.contentTitle}>{e.name}</h3>
+                    <p className={s.contentSubtitle}>{e.role} · {e.date} · {e.location}</p>
+                    {e.note && <p className={s.contentText}>{e.note}</p>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

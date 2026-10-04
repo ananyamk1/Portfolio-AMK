@@ -5,7 +5,39 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Leaf-green & beige palette. Overrides Tailwind's zinc/blue/purple/black/white
+   so every page picks up the theme. Tweak these values to adjust the look. */
+@theme {
+  /* zinc → beige text on deep forest-green surfaces */
+  --color-zinc-50: #f6f2e4;
+  --color-zinc-100: #ede7d3;
+  --color-zinc-200: #e0d9c0;
+  --color-zinc-300: #ccc6a8;
+  --color-zinc-400: #a7ab88;
+  --color-zinc-500: #838b69;
+  --color-zinc-600: #5e6a4c;
+  --color-zinc-700: #3d4a33;
+  --color-zinc-800: #283424;
+  --color-zinc-900: #19221a;
+  --color-zinc-950: #0f1610;
+
+  /* blue → light grass / yellow-green */
+  --color-blue-300: #d6e8a0;
+  --color-blue-400: #b8d46c;
+  --color-blue-500: #9abc4b;
+  --color-blue-900: #2e3c18;
+
+  /* purple → soft sage green */
+  --color-purple-300: #bfdcb5;
+  --color-purple-400: #93c28a;
+  --color-purple-500: #72a86a;
+  --color-purple-900: #213a22;
+
+  --color-black: #0a100b;
+  --color-white: #f6f2e4;
+}
+
 html {
   color-scheme: dark;
-  background: #09090b;
+  background: #0f1610;
 }
