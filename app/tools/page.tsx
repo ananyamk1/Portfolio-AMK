@@ -17,7 +17,13 @@ export default function ToolsPage() {
           {tools.map((t) => (
             <a key={t.name} href={t.href} target="_blank" rel="noopener noreferrer" className={s.toolCardLink}>
               <div className={s.toolIconContainer}>
-                <Image src={t.icon} alt={t.name} width={48} height={48} className={s.toolIcon} />
+                {t.icon ? (
+                  <Image src={t.icon} alt={t.name} width={48} height={48} className={s.toolIcon} />
+                ) : (
+                  <div className={`${s.toolIcon} flex items-center justify-center bg-zinc-800 text-sm font-bold text-zinc-200`}>
+                    {t.name.slice(0, 2)}
+                  </div>
+                )}
               </div>
               <div className={s.toolTextContainer}>
                 <p className={s.toolName}>{t.name}</p>

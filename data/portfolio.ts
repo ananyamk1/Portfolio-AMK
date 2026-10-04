@@ -164,13 +164,19 @@ export const projects: Project[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// TOOLS — icons live in /public
+// TOOLS — icons live in /public. `icon` is optional: without one, a lettered tile is shown.
 // ---------------------------------------------------------------------------
-export const tools = [
+export const tools: { name: string; category: string; icon?: string; href: string }[] = [
+  { name: "SQL", category: "Language", href: "https://en.wikipedia.org/wiki/SQL" },
+  { name: "PySpark", category: "Big Data", href: "https://spark.apache.org/docs/latest/api/python/" },
+  { name: "Databricks", category: "Data Platform", href: "https://www.databricks.com" },
+  { name: "Tableau", category: "BI & Visualization", href: "https://www.tableau.com" },
+  { name: "Power BI", category: "BI & Visualization", href: "https://www.microsoft.com/power-platform/products/power-bi" },
+  { name: "SAS", category: "Analytics", href: "https://www.sas.com" },
+  { name: "Microsoft Office", category: "Productivity", href: "https://www.office.com" },
   { name: "VS Code", category: "Editor", icon: asset("/vscode.webp"), href: "https://code.visualstudio.com" },
   { name: "PyCharm", category: "Editor", icon: asset("/pycharm.webp"), href: "https://www.jetbrains.com/pycharm/" },
   { name: "Cursor", category: "AI Editor", icon: asset("/cursor.webp"), href: "https://cursor.com" },
-  { name: "Windsurf", category: "AI Editor", icon: asset("/windsurf.webp"), href: "https://windsurf.com" },
   { name: "Claude", category: "AI Assistant", icon: asset("/claude.webp"), href: "https://claude.ai" },
   { name: "ChatGPT", category: "AI Assistant", icon: asset("/chatgpt.webp"), href: "https://chatgpt.com" },
   { name: "Gemini", category: "AI Assistant", icon: asset("/gemini.webp"), href: "https://gemini.google.com" },
@@ -178,6 +184,4 @@ export const tools = [
   { name: "Hugging Face", category: "ML Models", icon: asset("/huggingface.webp"), href: "https://huggingface.co" },
   { name: "Lovable", category: "Prototyping", icon: asset("/lovable.webp"), href: "https://lovable.dev" },
   { name: "Notion", category: "Notes", icon: asset("/notion.webp"), href: "https://notion.so" },
-  { name: "Slack", category: "Communication", icon: asset("/slack.webp"), href: "https://slack.com" },
-  { name: "Medium", category: "Writing", icon: asset("/medium.webp"), href: "https://medium.com" },
 ];
